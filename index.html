@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="Assets/notebook.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <script
+      src="https://kit.fontawesome.com/9226bb3867.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sancreek"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>What-to-do</title>
+  </head>
+  <body>
+    <div class="left-bar">
+      <div class="left-bar-fix">
+        <div class="left-bar-item title" onclick="renderAll()">
+          All (<span id="all-count"></span>)
+        </div>
+        <div class="left-bar-item title" onclick="renderDone()">
+          Done (<span id="done-count">0</span>)
+        </div>
+        <div class="left-bar-item title" onclick="renderDel()">
+          Bin (<span id="del-count">0</span>)
+        </div>
+      </div>
+      <div id="add-tag-modal">
+        <label for="task-name">Task name: </label>
+        <textarea name="task-name" id="task-name"></textarea>
+        <label for="tag-name">Tag name:</label>
+        <textarea name="tag-name" id="tag-name"></textarea>
+        <button class="tag-name-button" onclick="addTask()">Add</button>
+      </div>
+    </div>
+    <div class="right-section">
+      <div class="top-nav">
+        <div class="clock"><span id="datetime"></span></div>
+        <div class="logo">What-to-do</div>
+        <div class="welcome"><p>Hello, Dang!</p></div>
+      </div>
+
+      <div class="task-list">
+        <!--  <div class="task">
+          <div class="task-info">
+            <h2>Clean the room</h2>
+            <p class="tag">Housework</p>
+          </div>
+          <div class="action-button">
+            <button class="done-button">Done</button>
+            <button class="del-button">Delete</button>
+          </div>
+        </div>
+ -->
+        <!--      <div>
+          <img src="Assets/done.jpeg" alt="meme" id="meme" />
+          <p>Nice job! Now go do something else!</p>
+        </div> -->
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
